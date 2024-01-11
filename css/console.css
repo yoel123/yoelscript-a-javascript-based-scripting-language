@@ -1,0 +1,48 @@
+     *{margin: 0;padding: 0;box-sizing: border-box;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+      #root{
+          width: 100%;
+          height: 100vh;
+      }
+      /*console component*/
+      .console{
+          width:100%;
+          height:100%;
+          max-height:100%;
+          background-color:black;
+          color:whitesmoke;
+          overflow-y:auto;
+          overflow-x:hidden;
+          padding: 20px 11px;
+      }
+      .console *::selection{
+          color:black;
+          background-color: whitesmoke;
+      }
+      
+      /*text component*/
+      .text{
+          color:whitesmoke;
+          font-size:1.2rem;
+      }
+      
+      /*input component*/
+      .input{
+          width: fit-content;
+          color:whitesmoke;
+          font-size:1.2rem;
+          background-color: inherit;
+          border-right:5px solid whitesmoke;
+          caret-color:transparent;
+          animation: input-caret-blink 1.5s step-end infinite;
+      }
+      .input:focus{
+          outline:none;
+      }
+      .input::before{
+          content:">";
+      }
+      @keyframes input-caret-blink{
+          50%{
+              border-color:transparent;
+          }
+      }
